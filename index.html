@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Interactive Card Details</title>
+</head>
+<body>
+    <div class="bg-img">
+        <img src="images/bg-main-desktop.png" alt="">
+    </div>
+    <div class="bg-img-mobile">
+        <img src="images/bg-main-mobile.png" alt="">
+    </div>
+    <div class="container">
+        <div class="grid">
+            <div class="credit-cards">
+                <!-- front credit card -->
+                <div class="front-cc">
+                    <div class="front-img">
+                        <img src="images/bg-card-front.png" alt="">
+                    </div>
+                    <div class="shapes flex">
+                        <div class="circle"></div>
+                        <div class="circle-trans"></div>
+                    </div>
+                    <div>
+                        <span id="cc-number">0000 0000 0000 0000</span>
+                    </div>
+                    <div class="cc-name-date">
+                        <div>
+                            <span id="cc-name">Jane Appleseed</span>
+                        </div>
+                        <div id="cc-mm-yy">
+                            <span id="cc-mm">
+                                00
+                            </span> <p>/</p> <span id="cc-yy">00</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- back credit card -->
+                <div class="back-cc">
+                    <img src="images/bg-card-back.png" alt="">
+                    <span id="back-cvc">000</span>
+                </div>
+            </div>
+            <!-- credit card fields -->
+            <div class="cc-form">
+                <form class="my-form">
+                    <div class="form-control">
+                        <div class="cardHolder">
+                            <label for="card-name">Cardholder Name</label>
+                            <input type="text" name="cardholder" id="card-name" placeholder="e.g. Jane Appleseed" >
+                            <p class="empty-field"></p>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <div class="cardNumber">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" name="card number" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" >
+                            <p class="empty-field"></p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="form-control">
+                            <label for="exp-date">exp.date (mm/yy)</label>
+                            <span id="exp-date">
+                                <input type="text" name="month" id="month" maxlength="2"  size="10"  placeholder="MM" >
+                                 <input type="text" id="year" maxlength="2" size="10"   placeholder="YY">
+                            </span>
+                            <p class="empty-field"></p>
+                        </div>
+                        <div class="form-control">
+                            <div class="cvc ">
+                                 <label for="cvc">CVC</label>
+                                 <input type="text" name="cvc" id="cvc" maxlength="3"  placeholder="e.g. 123" pattern="[0-9]{3}"  >
+                                <p class="empty-field"></p>
+                            </div>
+                         </div>
+                    </div>
+                            <button class="btn" id="btn-submit" type="submit">
+                                Confirm
+                            </button>
+                </form>
+
+                <!-- thank you -->
+
+                <div class="success-page">
+                    <img src="images/icon-complete.svg" alt="">
+                    <h2>Thank You!</h2>
+                    <P>We've added your card details</P>
+                    <button type="button" class="btn btn-success">
+                        <a href="index.html">Continue</a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="javascript/app.js"></script>
+</body>
+</html>
